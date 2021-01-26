@@ -1,152 +1,72 @@
-<!-- doctype html tag tells the browser that this HTML document is HTML5 -->
-<!-- this is called doctype declaration -->
+<!-- The DOCTYPE html declaration lets the browser know the following is an HTML5 document -->
 <!DOCTYPE html>
+<!--The html tag is the root tag, containing all of the html code for the page -->
 <html>
+<!-- The head element stores data outside of the document's content, metadata -->
 <head>
-	<title>Basic HTML Tags</title>
-	<!-- This is the tag that tells the browser which character-set you are using -->
+	<!-- The title element is used to display text in the browser's title bar or tab -->
+	<title>Assignment 1</title>
+	<!-- This charset metadata tells the browser what characterset to use-->
 	<meta charset="utf-8">
-	<!-- meta tags are important to determine the SEO of a webpage -->
-	<!-- SEO = Search Engine Optimization -->
-	<meta name="description" content="This is a HTML document containing HTML tags">
-	<!-- Meta keywords is the SEO specifc tag used to tell the site crawlers what keywords are in your site -->
-	<meta name="keywords" content="HTML, HTML5, Tags, Basic HTML, Standard Tags">
-	<!-- meta robots tag can have a combination of following values : 
-		1) index - index this page in the search repository
-		2) noindex - do not index this page 
-		3) follow - follow tells the search engine to follow all the changes to this page 
-		4) nofollow - no follow tells the search engine to not follow this page 	 -->
-	<meta name="robots" content="noindex, nofollow">
-
 </head>
+<!-- The body element contains all the content of the page -->
 <body>
-	<!-- header is the semantic tag that tells the browser that content of this tag has the most importance and must be rendered with the highest priority -->
-	<!-- All of the content in the header tag is called heading content
-	 -->
-	 <!-- header is one of the many semantic tags introduced in HTML5 -->
+	<!-- The header element is used to display content at the top of the web page -->
 	<header>
-		<!-- heading tag can have h1, h2,h3,h4,h5,h6 -->
-		<!-- h1 being the most important heading -->
-		<!-- h6 being the least important -->
-		<h1>Week 2 - Basics of HTML</h1>
-		<!-- nav tag is used to create navigation for a web page -->
-		<!-- there can be more than one nav tags for a document -->
-		<!-- nav is just a container and not actual navigation -->
-		<nav>
-			<!-- ul is the child of nav and is used to create the navigation links list -->
-			<ul>
-				<!-- li tags are used to create list elements of a navigation -->
-				<li>
-					<!-- a tag is used to create links in a html document -->
-					<!-- a tag is the only tag that can create links in a document -->
-					<!-- href is the attribute of a tag which tells the browser where to link this tag to -->
-					<!-- a tag is also called anchor tag -->
-					<!-- an attribute is additional information that is used to enhance the functionality of a tag -->
-					<a href="https://algonquincollege.com">Link 1</a>
-				</li>
-				<li>
-					<!-- title attribute is used for additional information that needs to be provided to the user about this specific link -->
-					<!-- title attribute is also a requirement for HTML validation -->
-					<!-- a tag is an example of inline element -->
-					<a href="https://google.com" title="Google">Link 2</a>
-				</li>
-				<li>
-					<!-- target attribute for an anchor tag is used to tell the browser how to handle opening that link -->
-					<!-- target="_blank" tells the browser to open this link in a new window -->
-					<a href="https://lynda.com" title="Lynda Website" target="_blank">Link 3</a>
-				</li>
-			</ul>
-		</nav>
+		<!-- h1 through h6 elements are used to display headings in order of importance, appearing in larger to smaller sizes -->
+		<h1>Assingment 1</h1>
 	</header>
-	<!-- main tag is the semantic tag used to specify the main body of the HTML document -->
+	<!-- The main element indicates the main body of the page -->
 	<main>
-		<p>Paragraph in the main tag</p>
-		<!-- div tag is the most generic content holder used in HTML -->
-		<!-- It is used to create sections, containers, and text itself -->
-		<!-- div tag does not follow the semantic rendering, therefore it can be a parent or child of any tag except inline tags and p tag -->
-		<!-- div tag is an example of block level element -->
-		<!-- A block level element takes entire width on a page and pushes the next tag to next line when rendering -->
-		<div>
-			Content in a div tag
-		</div>
-
-		<!-- section tag is HTML5 semantic tag that is used to specify various sections in a HTML body -->
-		<!-- Section tag similar to header and nav tag is just a container and its content is called section content -->
+		<!-- This is an h2 heading element, creating smaller text than h1 as it is less important -->
+		<h2>This is the main Section</h2>
+	<!-- The div element is used as a block level container -->
+		<div> I am a div </div>
+	<!-- The p element indicates block level paragraphs of text -->
+		<p> I am a paragraph </p>
+	<!-- The br tag causes a line break -->
+		<p>This paragraph has a<br>Break</p>
+	<!-- The section element defines sections of the body of the page -->
 		<section>
-			<!-- article tag is used to create the content/text for HTML document -->
-			<!-- Note: article tag as any other semantic tag is also know as structural element -->
+			<h3>This is a section</h3>
+		<!-- The article element can be used to subdivide sections -->
 			<article>
-				<h2>Main Text</h2>
-				<p>Paragraph inside an article</p><p>Paragraph 2 </p>
-				<p>
-					<!-- span is an inline element -->
-					<!-- inline elements render according to its content -->
-					<!-- The space taken by inline element is decided by its content and not the tag properties -->
-					<span></span>
-					<span>Span 2</span>
-					<span></span>
-					<span>Span 4</span>
-				</p>
-				<!-- b tag is a bold tag, is used to make a text bold -->
-				<p>This text is <b>Bold</b></p>
-				<!-- i tag is an italics tag, is used to make a text italics -->
-				<p>This text is <i>Italics</i></p>
-				<!-- u tag is an underline tag, is used to make a text underline -->
-				<!-- All of these are called text decoration tags and are inline elements -->
-				<p>This text is <u>underline</u></p>
-				<p>
-					<!-- child element always inherits the parent element properties -->
-					<b>
-						<i>
-							<u>
-								Combination
-							</u>
-						</i>
-					</b>
-				</p>
+			This is an important part of an section
 			</article>
-			<!-- aside tag is another structural/semantic element that is used to create less important text information for a page -->
+		<!-- The aside element is another form of dividing a section, considered less important than an article -->
 			<aside>
-				<h3>Extra Links</h3>
-				<nav>
-					<!-- side list 1 -->
-					<ul>
-						<li>
-							<a href="https://sublink">Sub Link 1</a>
-						</li>
-						<li>
-							<!-- side sub sub list -->
-							<ul>
-								<li>Sub Sub List 1</li>
-								<li>Sub Sub List 2</li>
-								<!-- ol being used as sub sub sub list -->
-								<ol>
-									<li>Sub sub sub 1</li>
-									<li>sub sub sub 2</li>
-								</ol>
-							</ul>
-						</li>	
-					</ul>
-				</nav>
+			This is less important part of the section
 			</aside>
-		</section>
-	</main>
-	<div>div outside main</div>
-	<!-- footer is also a structural tag used to define footer of html document -->
-	<footer>
-		<p>This is a footer</p>
 
-		<section>
-			<p>Section 1</p>
-		</section>
-		<section>
-			<p>Section 2</p>
-		</section>
-		<section>
-			<p>Section 3</p>
-		</section>
+			<h4>Some links in a Div</h4>
+		<!-- The div element is used as a block level container -->
+			<div>
+			<!-- The a element is used to create weblinks. The href attribute tells the browser which URL to visit. The title attribute displays text when the mouse hovers over the link -->
+				<a href="https://www.google.com" title="Google">Google Link</a>
+				<a href="https://www.amazon.com" title="Amazon">Amazon Link</a>
+			</div>
+
+		<h5>Some Lists in a Div</h5>
+
+		<div>
+			<!-- The ul element is used to create unordered lists with bullets -->
+			<ul>
+				<!-- The li element designates each part of the list -->
+				<li>Unordered List Element 1</li>
+				<li>Unordered List Element 2</li>
+				<li>Unordered List Element 3</li>
+			</ul>
+			<!-- The ol element is used to create ordered lists which are numbered -->
+			<ol>
+				<li>Ordered list Element 1</li>
+				<li>Ordered list Element 2</li>				
+				<li>Ordered list Element 3</li>
+			</ol>
+		</div>
+	</section>
+<!-- The footer element is similar to the header element, but used to display content at the bottom of the page instead of the top -->
+<footer>
+	This is the footer
+</footer>
+</main>
 		
-	</footer>
-	
-</body>
-</html>
