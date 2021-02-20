@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 2</title>
+		<!-- This styling allows for my table to have borders -->
+</head>
+<body>
+	<!-- id attribute uniquely identifies this header as "header" -->
+	<header id="header">
+		<h1>Assignment 2</h1>
+	</header>
+	<main>
+		<!-- class attribute includes this section in a group designated "main-selection" -->
+		<!-- this section displays the table of employees -->
+		<section id="table-section" class="main-section">
+			<h2>Employee List</h2>
+	        <!-- this is the table of employees -->
+	        <table border="1">	                    
+	        	<thead>	                       
+	        		<tr>	                   
+	           			<th>Id</th>
+	            		<th>Name</th>
+	            		<th>email</th>
+	        		</tr>
+	       		</thead>
+
+	        	<tbody>	                        
+	            	<tr>	                           
+	                	<td>1</td>
+	                	<td>John</td>
+	                	<td>john@fakemail.com</td>    
+	           	 	</tr>
+	                    
+	            	<tr>
+	            	    <td>2</td>
+	                	<td>sam</td>
+	                	<td>sam@fakemail.com</td>
+	            	</tr>
+
+	            	<tr>	                           
+	                	<td>1</td>
+	                	<td>Bob</td>
+	                	<td>bob@fakemail.com</td>
+	            	</tr>
+
+	            	<tr>	    
+	                	<td>1</td>
+	                	<td>Jack</td>
+	                	<td>jack@fakemail.com</td>
+	            	</tr>
+
+	            	<tr>	                           
+	                	<td>1</td>
+	                	<td>rob</td>
+	                	<td>Rob@fakemail.com</td>
+	            	</tr>
+	        	</tbody>
+	                    
+	        	<tfoot> 	     
+	            	<tr>	
+	            		<!--the colspan attribute let's the table's "foot" span all 3 columns -->
+	           			<td colspan="3">
+	              			All of the above are Division Heads
+	            		</td>
+	           		</tr>
+	        	</tfoot>
+	        </table>
+	   	</section>
+	   	<!-- this section displays animal photos -->
+	    <section id="animal-img-section" class="main-section">
+	        <h2>Animals</h2>
+	        <article>
+	        	<!-- The photo of an elephant -->
+	        	<figure>
+	        		<img src="img/elephant.jpg" alt="Elephant" width="300"  height="200">
+	        		<figcaption>This is an Elephant.</figcaption>
+	        	</figure>
+				<!-- The photo of a lion-->
+	        	<figure>
+	        		<img src="img/lion.jpg" alt="Lion" width="300"  height="200">
+	        		<figcaption>This is a lion.</figcaption>
+	        	</figure>
+				<!-- The photo of a snake-->
+	        	<figure>
+	        		<img src="img/snake.jpg" alt="Snake" width="300"  height="200">
+	        		<figcaption>This is a snake.</figcaption>
+	        	</figure>	
+				<!-- The photo of a whale -->
+	        	<figure>
+	        		<img src="img/whale.jpg" alt="Whale" width="300"  height="200">
+	        		<figcaption>This is a Whale.</figcaption>
+	        	</figure>
+				<!-- The photo of a hawk -->
+	        	<figure>
+	        		<img src="img/hawk.jpg" alt="Hawk" width="300"  height="200">
+	        		<figcaption>This is a Hawk.</figcaption>
+	        	</figure>	
+	        </article>
+	    </section>
+	    <!-- this section highlights a few different html entities -->
+	    <section id="htmlent-section" class="main-section">
+	    	<h2>HTML Entities</h2>
+	    	<article>
+	    	<p>Non Breaking Space:&nbsp;</p>
+	    	<p>ampersand : 	&amp;</p>
+	    	<p>Pound : 	&pound;</p>	
+	    	<p>Copyright : &copy;</p>	
+	    	</article>
+	    </section>
+	    <!-- this section demonstrates a description list, abbreviations, and a detail element with summary -->
+	    <section id="spctag-section" class="main-section">
+	    	<h2>Special Tags</h2>
+	    	<!-- the description list -->
+	    	<article id="spctag-descrip" class="spctag-section">
+	    		<dl> 		
+	            	<dt>Coffee</dt> 
+	            	<dd>-black hot drink</dd> 
+	    			<dt>Milk</dt> 
+	    			<dd>-white cold liquid</dd> 	 
+	    		</dl>	
+	    	</article>
+	    	<!-- abbrevitions -->
+	    	<article article id="spctag-abbrv" class="spctag-section">
+	    		<p><abbr  title="Hyper Text Markup Language">HTML</abbr ></p>
+	    		<p><abbr  title="Cascading Style Sheets">CSS</abbr ></p>		
+	    	</article>
+	    	<!-- the detail element with summary -->
+	    	<article article id="spctag-dtls" class="spctag-section">
+	    		<details> 
+					 <summary>What is a mobile Phone?</summary>
+					 <p>A mobile phone, cell phone or hand phone, sometimes shortened to simply mobile, cell or just phone, is aportable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area.</p>
+				</details>	
+	    	</article>
+	    </section>
+	</main>
+	<footer id="footer">
+		<h2>Hidden Comment:</h2>
+		<!-- this is a hidden comment!!! -->
+	</footer>
+</body>
