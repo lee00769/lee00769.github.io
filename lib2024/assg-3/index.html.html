@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Forms</title>
+</head>
+<body>	
+	<!-- the main section -->
+	<section id="html-form" class="main-section">
+		<!-- The following is a form whose data goes to filledform.php via the get method. Data will show in url. -->
+		<form action="filledform.php" method="get">
+			<!-- This div containts a text type input for inputting a first name -->
+			<div id="fname-container" class="formins">
+				<label for="first_name">First name</label>
+				<input type="text" name="first_name" id="first_name" placeholder="Enter First Name" required>
+			</div>
+			<!-- This div contains a text type input for inputting a last name -->
+			<div id="lname-container" class="formins">
+				<label for="last_name">Last Name</label>
+				<input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" required>
+			</div>
+			<!-- This div contains an email type input for inputting an email address -->
+			<div id="email-container" class="formins">
+				<label for="email">Email</label>				
+				<input type="email" name="email" id="email" placeholder="address@mail.com" required>
+			</div>
+			<!-- This div contains a password type input for inputting a password -->
+			<div id="pw-container" class="formins">
+				<label for="pass">Password</label>
+				<input type="password" name="pass" id="pass" required>
+			</div>
+			<!-- This div contains a textarea type input for inputting introductory text -->
+			<div id="intro-container" class="formins">
+				<label for="intro">Introductory Text</label>
+				<textarea name="intro" id="intro" placeholder="Enter introductory text here"></textarea>
+			</div>
+			<!-- This div contains a date type input for inputting a birthday-->
+			<div id="birthday-container" class="formins">
+				<label for="dte">Enter Birthday</label>
+				<input type="date" name="dte" id="dte" required>
+			</div>
+			<!-- This div contains a number type input for inputting a phone number-->
+			<div id=phonenum-container class="formins">
+				<label for="num">Enter Phone Number</label>
+				<input type="number" id="num" name="num" placeholder="6131234000" required>
+			</div>
+			<!-- This div contains a radio type input for inputting gendre -->
+			<div id="gender-container" class="formins">
+				<p>Please indicate gender</p>
+				<label for="male">
+					<input type="radio" name="gender" id="male" value="male" checked>
+					Male
+				</label>
+				<label>
+					<input type="radio" name="gender" id="female" value="female">
+					Female
+				</label>				
+			</div>
+			<!-- This div contains a text type input for inputting a street address -->
+			<div id="add-container" class="formins">
+				<label for="address">Address</label>
+				<input type="text" name="address" id="address" placeholder="Please enter your address">
+			</div>
+			<!-- This div contains a text type input for inputting a city -->
+			<div id="cty-container" class="formins">
+				<label for="city">City</label>
+				<input type="text" name="city" id="city" placeholder="Please enter your city">
+			</div>
+			<!-- This div contains a select element with a drop down menu for selecting a province -->
+			<div id="prov-drop-container" class="formins">
+				<label for="prov">Province</label>
+				<select name="prov" id="prov">
+					<option value="ontario" selected>Ontario</option>
+					<option value="quebec">Quebec</option>						
+					<option value="new_brunswick">New Brunswick</option>
+					<option value="nova_scotia">Nova Scotia</option>
+					<option value="newfoundland">Newfoundland</option>
+				</select>
+			</div>
+			<!-- This div contains a select element with a drop down menu for selecting a country -->
+			<div id="cntry-drop-container" class="formins">
+				<label for="country">Country</label>
+				<select name="country" id="country">
+					<option value="canada"  selected>Canada</option>
+					<option value="usa">USA</option>						
+					<option value="mexico">Mexico</option>
+					<option value="guatemala">Guatemala</option>
+					<option value="belize">Belize</option>
+				</select>
+			</div>
+			<!-- This div contains a text type input for inputting a postal code -->
+			<div id="post-container" class="formins">
+				<label for="postal_code">Postal Code</label>
+				<input type="text" name="postal_code" id="postal_code" placeholder="A1A2B2">
+			</div>
+			<!-- This div contains 5 checkbox type inputs for inputting hobbies -->
+			<div id="hobbies-container" class="formins">
+				<h3>Hobbies/Interests:</h3>
+				<label for="stamps">Stamps</label>
+				<input type="checkbox" name="hobbies" id="stamps" value="stamps"> <br>
+
+				<label for="coins">Coins</label>
+				<input type="checkbox" name="hobbies" id="coins" value="coins"> <br>
+
+				<label for="soccer">Soccer</label>
+				<input type="checkbox" name="hobbies" id="soccer" value="soccer"> <br>
+
+				<label for="baking">Baking</label>
+				<input type="checkbox" name="hobbies" id="baking" value="baking"> <br>
+
+				<label for="knitting">Knitting</label>
+				<input type="checkbox" name="hobbies" id="knitting" value="knitting"> <br>
+			</div>
+			<div id="url-container" class="formins">
+				<label for="website">Enter website adress:</label>
+				<input type="url" name="website" id="website" placeholder="https://www.example.com/" required>
+			</div>
+			<!-- This button is required to submit the form -->
+			<button type="submit">Submit</button>
+			<!-- This button resets the form without having to relaod the webpage -->
+			<button type="reset">Reset</button>
+		</form>
+	</section>
+</body>
+</html>
