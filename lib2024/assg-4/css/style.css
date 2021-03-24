@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+
+ /*http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS clearfix*/
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*
+	Color Pallete
+	
+	Green : #7CC576;
+	Blue : #6DCFF6;
+	Black : #000000;
+	White : #FFFFFF;
+*/
+
+/*Max Width for tagerting desktops*/
+/*All containers will be no larger that 960px*/
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+
+/*Body Styles, for background*/
+
+body {
+	
+	background-image: url("../img/double-bubble-outline.png");
+}
+
+/*Typography Styles*/
+
+
+
+h1, h2, h3, a {
+	font-family: 'Libre Baskerville', serif;
+
+}
+
+
+h1 {
+	font-size: 43px;
+}
+
+h2 {
+	font-size: 27px
+}
+
+h3, a {
+	font-size: 22px;
+}
+
+
+p, figcaption {
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+}
+
+/*Shared Header and Footer Styles*/
+
+header, footer {		
+	width: 100%;
+	background: #7cc576;
+	box-sizing: border-box;
+	padding: 2%
+
+}
+
+/*Header Styles*/
+
+
+
+.logo-container {
+	width: 23%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.title-container {
+	width: 77%;
+	padding-top: 3%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.main-nav-container{
+	width: 100%;
+	float: left;
+}
+
+.nav-link {
+	width: 19%;
+	/*total width = 19% + 3%(left margin) + 3% (right margin) */
+	box-sizing: border-box;
+	/*border box adjusts the width according to the padding only and does not consider margins*/
+	/*Therefore the space used by margins should be manually adjusted in the width declaration*/
+	margin: 0 3%;
+	padding-top: 22.5px;
+	height: 65px;
+	float: left;
+	background: #6dcff6;
+	text-align: center;
+	border-radius: 5%;
+	text-decoration:none;
+
+}
+
+
+/*Main Article Styles*/
+
+.main-article {
+	width: 65%;
+	padding: 2%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.main-content-title {
+	width: 100%;
+	padding-top: 2%;
+	padding-left: 2%;
+}
+
+/*Aside Styles*/
+
+.side-section {
+	width: 35%;
+	padding: 2%;
+	float: right;
+	box-sizing: border-box;
+
+}
+
+.side-image {
+	width: 100%;
+}
+
+.side-title {
+	padding-top: 8%;
+	padding-bottom: 4%;
+	padding-left: 2%;
+	padding-right: 2%
+}
+
+.side-para-container {
+	padding-left: 2%; 
+	padding-right: 2%;
+	}
+
+/*Secondary Section Styles*/
+
+.secondary-section {
+	width: 100%;
+	padding-right: 2%;
+	padding-left: 2%;
+	padding-bottom: 2%;
+	box-sizing: border-box;
+}
+
+.secondary-content-title {
+	padding-bottom: 2%;
+}
+
+.tape-img {
+	width: 100%;
+}
+
+figure {
+	width:33%;
+	display: inline-block;
+	text-align: center;
+}
+
+.fig1	{
+	padding-right: 9%;
+	padding-left: 1%;
+	box-sizing: border-box;
+}
+
+.fig2	{
+	padding-right: 5%;
+	padding-left: 5%;
+	box-sizing: border-box;
+}
+
+.fig3	{
+	padding-right: 1%;
+	padding-left: 9%;
+	box-sizing: border-box;
+}
+
+
+
+/*Footer Styles*/
+
+
+.copyright {	
+	float: left;
+	padding-top: 3%;
+}
+
+.foot-links {
+	float: right;
+	margin: 0.5%;
+}
+

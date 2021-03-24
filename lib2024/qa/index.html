@@ -62,6 +62,7 @@
 					&lt;/p&gt;
 			</p>
 		</li>
+			<!-- Qus 5-->
 		<li>
 			<p>
 				<strong>Qus:</strong>
@@ -72,6 +73,7 @@
 				&lt;i&gt;, because it is used to modify text, make it italic, the other tags are used to contain content
 			</p>
 		</li>
+			<!-- Qus 6 -->
 		<li>
 			<p>
 				<strong>Qus:</strong>
@@ -82,6 +84,7 @@
 				&lt;nav&gt;&lt;/nav&gt;
 			</p>
 		</li>
+			<!-- Qus 7 -->
 		<li>
 			<p>
 				<strong>Qus:</strong>
@@ -92,6 +95,7 @@
 				&lt;img&gt;, its attributes are src, alt, width, and height.
 			</p>
 		</li>
+			<!-- Qus 8 -->
 		<li>
 			<p>
 				<strong>Qus:</strong>
@@ -102,6 +106,7 @@
 				 &lt;b&gt;, it used to bring attention to text, whereas all the other tags are rleated to tables
 			</p>
 		</li>
+			<!-- Qus 9 -->
 		<li>
 			<p>
 				<strong>Qus:</strong>
@@ -112,6 +117,7 @@
 				&lt;input type="color" name="clr" id="clr"&gt;
 			</p>
 		</li>
+			<!-- Qus 10 -->
 		<li>
 			<p>
 				<strong>Qus:</strong>
@@ -126,6 +132,7 @@
 					&lt;input type="email" name="email" id="email" value="youremail@there.com"&gt;
 			</p>
 		</li>
+			<!-- Qus 11 -->
 		<li>
 			<p>
 				<strong>Qus:</strong>
@@ -133,9 +140,10 @@
 			</p>
 			<p>
 				<strong>Ans:</strong>
-				&lt;p style="color:red;font-size:22px;"&gt;				
+				&lt;p style="color: red; font-size: 22px;"&gt;				
 			</p>
 		</li>
+			<!-- Qus 12 -->
 		<li>
 			<p>
 				<strong>Qus:</strong>
@@ -146,6 +154,84 @@
 				You would link to an external style sheet uing a "link" element, with a "rel" attribute whose value is "stylesheet", a type attribute whose value is "text/css", and a href attribute showing the relative path to the stylesheet. 
 				<br>
 				&lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;				
+			</p>
+		</li>
+			<!-- Qus 13 -->
+		<li>
+			<p>
+				<strong>Qus:</strong>
+				 Create CSS block to center an element both horizontally and vertically that has position:absolute and has width:200px and height:200px.  
+			</p>
+			<p>
+				<strong>Ans:</strong>
+				<pre>
+					<code>
+						element {
+							position: absolute;
+							width: 200px;
+							height: 200px;
+							top: 50%;
+							left: 50%;
+							margin-top: -100px;
+							margin-left: -100px;
+						}
+					</code>
+				</pre>			
+			</p>
+		</li>
+			<!-- Qus 14 -->
+		<li>
+			<p>
+				<strong>Qus:</strong>
+				 Create CSS keyframes block called "spin" that rotates an element. 
+			</p>
+			<p>
+				<strong>Ans:</strong>
+				<pre>
+					<code>
+						@keyframes spin {			
+							from {
+								transform: rotate(0deg);
+							}
+							to {
+								transform: rotate(360deg);
+							}
+						}
+					</code>
+				</pre>				
+			</p>
+		</li>
+			<!-- Qus 15 -->
+		<li>
+			<p>
+				<strong>Qus:</strong>
+				 Create CSS animation block to rotate an element that has the following properties :
+				 <ul>
+   					 <li>class "rotate-me"</li>
+  					 <li>It rotates 5 times at intervals of 0.5s with "linear" transition using animation keyframes "spin"</li>
+ 				</ul>
+			</p>
+			<p>
+				<strong>Ans:</strong>
+				<pre>
+					<code>
+						.rotate-me {
+							animation: 
+								spin 0.5s linear 5
+						}
+					</code>
+				</pre>			
+			</p>
+		</li>
+			<!-- Qus 16 -->
+		<li>
+			<p>
+				<strong>Qus:</strong>
+				 How would you include create an alert with string "I love JavaScript" using JavaScript?
+			</p>
+			<p>
+				<strong>Ans:</strong>
+				<code>alert("I love JavaScript")</code>			
 			</p>
 		</li>
   </ol>
