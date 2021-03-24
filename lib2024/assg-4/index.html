@@ -17,7 +17,6 @@
 			<h1 class="title">Title Of Page</h1>
 		</div>
 		<!-- Navigation links for Home, About, Contact and Work-->
-		<div>
 			<nav class="main-nav-container desktop-nav">
 				<ul>
 					<li>
@@ -34,27 +33,24 @@
 					</li>	
 				</ul>	
 			</nav>
-		</div>
 	</header>
-	<main>
-		<!-- Main content: An article with an aside to the right -->
-		<div class="main-content-container container clearfix">
-			<!-- The article, featuring a title and two paragraphs -->
-			<h2 class="main-content-title">Main Content Title</h2>
-			<article class="main-article">				
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar, mi non bibendum cursus, nisi nisi viverra ipsum, vitae suscipit augue nunc id massa. Vestibulum vitae tristique lorem. In facilisis eu mi at dignissim. Proin placerat nibh volutpat augue lobortis, vel venenatis eros pellentesque. Duis pellentesque dolor quis tortor imperdiet porttitor. Curabitur nibh metus, ultrices et rutrum sed, egestas fringilla ipsum. Phasellus ipsum sem, fringilla eu velit sit amet, gravida imperdiet nibh. Nam vehicula sodales accumsan. Phasellus eget euismod ipsum. Curabitur vel est condimentum, sodales orci id, malesuada turpis.</p>
-				<br>
-				<p>Maecenas at pretium lectus. Curabitur efficitur sollicitudin augue, vel faucibus leo ullamcorper eget. Nulla eget scelerisque arcu. Fusce et faucibus nisi. Suspendisse dictum at ex eget ultrices. Sed tristique pellentesque mauris, in vehicula velit tempus sit amet. Vivamus elit magna, maximus id nulla at, eleifend scelerisque mi. Donec ornare dolor ut ex molestie semper. Sed at tempus nulla. Proin volutpat ipsum et magna maximus, dapibus posuere lorem molestie. In pharetra felis non sem dapibus elementum. Phasellus metus orci, tempus non sagittis ac, iaculis sed nunc. Cras auctor ipsum ut accumsan pulvinar. Ut tellus elementum sagittis vitae et leo duis. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Velit aliquet sagittis id consectetur purus ut faucibus.</p>
-			</article>
-			<!-- The aside, featuring an image and a titled paragraph -->
-			<aside class="side-section">
-				<img class="side-image" src="img/sidetape.jpg" >
-				<h3 class="side-title">Title of the sidebar</h3>	
-				<div class="side-para-container">	
-					<p>Duis eros augue, laoreet vel mole stie ut, lobortis dignissim metus. Duis sapien massa, vestibulum in sem at, tristique aliquet turpis.</p>
-				</div>	
-			</aside>
-		</div>
+	<!-- Main content: An article with an aside to the right -->
+	<main class="main-content-container container clearfix">		
+		<!-- The article, featuring a title and two paragraphs -->
+		<h2 class="main-content-title">Main Content Title</h2>
+		<article class="main-article">				
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar, mi non bibendum cursus, nisi nisi viverra ipsum, vitae suscipit augue nunc id massa. Vestibulum vitae tristique lorem. In facilisis eu mi at dignissim. Proin placerat nibh volutpat augue lobortis, vel venenatis eros pellentesque. Duis pellentesque dolor quis tortor imperdiet porttitor. Curabitur nibh metus, ultrices et rutrum sed, egestas fringilla ipsum. Phasellus ipsum sem, fringilla eu velit sit amet, gravida imperdiet nibh. Nam vehicula sodales accumsan. Phasellus eget euismod ipsum. Curabitur vel est condimentum, sodales orci id, malesuada turpis.</p>
+			<br>
+			<p>Maecenas at pretium lectus. Curabitur efficitur sollicitudin augue, vel faucibus leo ullamcorper eget. Nulla eget scelerisque arcu. Fusce et faucibus nisi. Suspendisse dictum at ex eget ultrices. Sed tristique pellentesque mauris, in vehicula velit tempus sit amet. Vivamus elit magna, maximus id nulla at, eleifend scelerisque mi. Donec ornare dolor ut ex molestie semper. Sed at tempus nulla. Proin volutpat ipsum et magna maximus, dapibus posuere lorem molestie. In pharetra felis non sem dapibus elementum. Phasellus metus orci, tempus non sagittis ac, iaculis sed nunc. Cras auctor ipsum ut accumsan pulvinar. Ut tellus elementum sagittis vitae et leo duis. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Velit aliquet sagittis id consectetur purus ut faucibus.</p>
+		</article>
+		<!-- The aside, featuring an image and a titled paragraph -->
+		<aside class="side-section">
+			<img class="side-image" alt="sidebar-tape" src="img/sidetape.jpg" >
+			<h3 class="side-title">Title of the sidebar</h3>	
+			<div class="side-para-container">	
+				<p>Duis eros augue, laoreet vel mole stie ut, lobortis dignissim metus. Duis sapien massa, vestibulum in sem at, tristique aliquet turpis.</p>
+			</div>	
+		</aside>
 		<!-- Secondary section, featuring three images-->
 		<section class="secondary-section container clearfix">
 				<h3 class="secondary-content-title">Secondary Content Title</h3>
@@ -72,17 +68,28 @@
 				</figure>
 		</section>
 	</main>
-	<!-- Footer, featuring copywrite to the left, and social media links to the right -->
+	<!-- Footer, featuring copywrite to the left, and social media navigation links to the right -->
 	<footer class="site-footer container clearfix">
-		<p class="copyright">CopyRight 2017, All Rights Reserved.</p>		
-			<a href="https://twitter.com/">
-				<img src="img/twitter.png" class="foot-links">	
-			</a>
-			<a href="https://youtube.com/">		
-				<img src="img/youtube.png" class="foot-links">
-			</a>	
-			<a href="https://facebook.com/">
-				<img src="img/facebook.png" class="foot-links">	
-			</a>
+		<!-- Copyright -->
+		<p class="copyright">CopyRight 2017, All Rights Reserved.</p>
+		<!-- Social media nav, featuring Twitter, Youtube and Facebook -->
+		<nav class="footer-nav-container footer-nav">
+			<ul>
+				<li>	
+					<a href="https://twitter.com/">
+						<img src="img/twitter.png" alt="twitter" class="foot-links">	
+					</a>
+				</li>
+				<li>
+					<a href="https://youtube.com/">		
+						<img src="img/youtube.png" alt="youtube" class="foot-links">
+					</a>
+				</li>
+				<li>	
+				<a href="https://facebook.com/">
+					<img src="img/facebook.png" alt="facebook" class="foot-links">	
+				</a>
+			</ul>
+		</nav>	
 	</footer>
 </body>
