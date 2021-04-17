@@ -61,8 +61,13 @@ table {
 /*
 	Color Pallete
 	
-	Green : #7CC576;
-	Blue : #6DCFF6;
+	Green : #72a9ae;
+	Light Green : #7ccdd4;
+	Light Grey : #dddddd;
+	Dark Grey : #454545;
+	Red : #CD201F;
+	Blue : #3b5999;
+	Light Blue : #55acee;
 	Black : #000000;
 	White : #FFFFFF;
 */
@@ -83,14 +88,10 @@ body {
 
 /*Typography Styles*/
 
-
-
-
 h2, h3, p, a, button {
 	font-family: 'Poppins', sans-serif;
 
 }
-
 
 h1 {
 	font-size: 43px;
@@ -125,7 +126,7 @@ header {
 }
 
 
-	/*Hamburger*/
+/*Hamburger*/
 
 
 .ham {
@@ -158,7 +159,7 @@ header {
 	bottom: 0;
 }
 
-	/*Nav*/
+/*Nav Styles*/
 
 .desktop-nav {
 	display: none;
@@ -187,7 +188,6 @@ header {
 
 }
 
-
 .nav-link {		
 	text-decoration: none;
 	color: #000000;
@@ -203,6 +203,7 @@ header {
 .about-article-div{
 	padding: 0% 3% 3% 3%;
 }
+
 /*Aside Styles*/
 
 .side-section {
@@ -229,6 +230,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin: 0 auto;
+  min-width: 600px;
 }
 
 td, th {
@@ -265,89 +267,66 @@ tr:nth-child(even) {
 	background: #7ccdd4;
 }
 
-/*Loader*/
+/*Loader Styles*/
 
 .overlay-container {
 	display: none;
-	/*position:fixed makes the element fix itself in position relative to the browser*/
 	position: fixed;
-	/*We make overlay width:100% and height:100% to make this element cover the enitre browser screen*/
 	width: 100%;
 	height: 100%;
-	background: radial-gradient(#a7a7a7, #4e4e4e);
+	background: radial-gradient(#dddddd, #454545);
 	top: 0;
-	/*background:rgba is used to create see-through background*/
-	/*rgb part is used to define red, greem and blue color values*/
-	/*a part is the alpha chanel, which defines the opactity of this element's background*/
-	/*alpha chanel ranges from 0 - 1, eg(0.1, 0.55, 0.98, 0, 1)*/
-	/* 0 here being fully transparent*/
-	/*1 here being fully opaque*/
 	z-index: 2;
-	/* z index is used to make an element closer to screen*/
-	/*to create an overlay, this element must have the highest z-index value*/
-	/* eg if another element on your document has z-index : 1000, then this element must have atleast z-index value of 1001 */
+	
 }
 
 .loader {
-	/*This is used to center an element on the screen both vertically and horizontally*/
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	width: 150px;
 	height: 150px;
 	margin: -75px 0 0 -75px;
-	/*margin is given based on the width and heigh of the element*/
-	/*margin-top: -(height/2)*/
-	/*margin-left : - (width/2)*/
-	/*margin : -(150/2) 0 0 -(150/2) */
-	border: 16px solid #f3f3f3;
-	/*border-radius 50% is used to crearte circles*/
-	border-radius: 50%;
-	border-top: 16px solid #3498db;
-	/*animation: name duration timing-function repetition*/
-	/*to define more than one CSS animation, use comma separated values*/
-	/*to increase readablity we define different animations in separate lines*/
-	animation: spin 2s linear infinite, change-color 4s ease-in-out infinite, border-radius-change 1s ease infinite;
+	border: 16px solid #454545;
+	border-radius: 25%;
+	border-top: 16px solid #dddddd;
+	animation: spin 1s ease-out infinite, change-color 1s ease infinite, border-radius-change 1s ease infinite;
 }
 
 
-/*keyframes declarion is used to define animation*/
-
-
-/*syntax - @keyframes name-of-the-animation*/
-
-
-/*The following keyframes declaration is used to spin an element on the screen*/
+/*This determins the loader's spin animation*/
 
 @keyframes spin {
-	/*from sets the start of the property in an animation*/
-	from {
-		transform: rotate(0deg);
-	}
-	/*to sets the ending of the property in an animation*/
-	to {
+
+	0% {
 		transform: rotate(360deg);
 	}
+
+	50% {
+		transform: rotate(0deg);
+	}
+
 }
 
 
-/*This @keyframes declaration will change the color from blue to orange to blue */
+/*This determines the loader's colour change*/
 
 @keyframes change-color {
 	/*0 % is begining*/
 	0% {
-		border-top-color: #3498db;
+		border-top-color: #72a9ae;
 	}
 	/*50% is the middle*/
 	50% {
-		border-top-color: #FF5722;
+		border-top-color: #FFFFFF;
 	}
 	/*100% is ending*/
 	100% {
-		border-top-color: #3498db;
+		border-top-color: #72a9ae;
 	}
 }
 
+/*This determines the loader's border change animation*/
 @keyframes border-radius-change {
 	0% {
 		border-radius: 50%;
@@ -360,7 +339,7 @@ tr:nth-child(even) {
 	}
 }
 
-/** Form Style **/
+/** Edit Profile Form Style **/
 
 .edit-profile-title {
 	padding: 3% 5%;
@@ -373,7 +352,6 @@ form {
 	color: black;
 	font-weight: bold;
 }
-
 
 
 label {
@@ -407,9 +385,7 @@ input[type=text], input[type=email], select {
 
 }
 
-/*Profile Card Style*/
-
-
+/*Profile Info Card Style*/
 
 
 .profile-info-title {
@@ -428,8 +404,6 @@ div#results {
   text-align: center;
   box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
 }
-
-
 
 #results span, #results a {
 	opacity: 0;
@@ -452,8 +426,8 @@ div#results {
 .mail-line {
 	padding-top: 3%;
 }
-/*Footer Styles*/
 
+/*Footer Styles*/
 
 footer {		
 		width: 100%;
@@ -505,17 +479,15 @@ footer {
 	color: #cd201f;
 }
 
-.tw-circle {
-	color: #55acee; 
-}
-
 .fb-circle {
 	color: #3b5999;
 }
 
-.address-text-container {
-	
+
+.tw-circle {
+	color: #55acee; 
 }
+
 
 .address-div {
 	text-align: center;
@@ -538,7 +510,7 @@ footer {
 
 @media only screen and (min-width: 768px) {
 
-/*the following css is used to restrict the content beyond 1280px*/
+/*the following css is used to restrict the content beyond 1024px*/
 	/*This is to make sure the main content is in the readbable area for large screen sizes*/
 	header, main, footer {
 
@@ -546,6 +518,7 @@ footer {
 		margin: 0 auto;
 
 	}
+
 	/*Header Styles*/
 
 
@@ -602,7 +575,7 @@ footer {
 
 
 
-	/*Aside Styles*/
+	/*Aside Desktop Styles*/
 
 	.side-section {
 		width: 35%;
@@ -617,7 +590,7 @@ footer {
 	}
 
 
-	/*Schedule Section Styles*/
+	/*Schedule Section Desktop Styles*/
 
 	.schedule-section-title {
 	padding: 3% 3%;
@@ -635,7 +608,7 @@ footer {
 
 
 
-	/*Profile area*/
+	/* Edit Profile Desktop Styles*/
 
 	.edit-profile-title {
 	padding: 3% 10%;
@@ -646,6 +619,8 @@ footer {
 		float: left ;
 
 	}
+
+	/*Profile Info Desktop Styles*/
 
 	.profile-info-title {
 	padding: 3% 20%;
@@ -665,14 +640,7 @@ footer {
 	  margin-bottom: 5%;
 	}
 
-	/*Footer Styles*/
-
-	footer {		
-		width: 100%;
-		background: #454545;
-		box-sizing: border-box;
-
-	}
+	/*Footer Desktop Styles*/
 
 	.footer-div {
 		width: 33%;

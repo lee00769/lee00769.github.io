@@ -9,13 +9,14 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 <body>
+	<!-- This is a container for the loader animation -->
 	<div class="overlay-container loader-container">
 		<div class="loader"></div>
 	</div>
-	<!-- Header with Cat Logo and Title-->
+	<!-- Header with "My Logo" and Nav-->
 	<header class="site-header container clearfix" id="site-header">
 		<h1 class="title">My logo</h1>
-		<!-- Navigation links for Home, About, Contact and Work-->
+		<!-- Desktop navigation links for Home, About, Schedule, Portfolio and Contact-->
 		<nav class="main-nav-container desktop-nav">
 			<ul>
 				<li>
@@ -35,8 +36,9 @@
 				</li>	
 			</ul>	
 		</nav>
+		<!-- This is a container for the hamburger -->
 		<div class="ham"></div>
-		<!-- mobile navigation start -->
+		<!-- Mobile navigation links for Home, About, Schedule, Portfolio and Contact -->
 		<div class="mobile-nav-container clearfix">
 			<nav class="main-nav-container mobile-nav">
 				<ul class="main-nav">
@@ -58,11 +60,10 @@
 				</ul>
 			</nav>
 		</div>
-		<!-- mobile navigation end -->
 	</header>
 	<!-- Main content: An article with an aside to the right -->
 	<main class="main-content-container container clearfix">		
-		<!-- The article, featuring a title and two paragraphs -->
+		<!-- The article, featuring the title "ABOUT" and two paragraphs -->
 		<article class="about-article">	
 			<h2 class="about-article-title">ABOUT</h2>
 			<div class="about-article-div">			
@@ -71,21 +72,20 @@
 				<p>Maecenas at pretium lectus. Curabitur efficitur sollicitudin augue, vel faucibus leo ullamcorper eget. Nulla eget scelerisque arcu. Fusce et faucibus nisi. Suspendisse dictum at ex eget ultrices. Sed tristique pellentesque mauris, in vehicula velit tempus sit amet. Vivamus elit magna, maximus id nulla at, eleifend scelerisque mi. Donec ornare dolor ut ex molestie semper. Sed at tempus nulla. Proin volutpat ipsum et magna maximus, dapibus posuere lorem molestie. In pharetra felis non sem dapibus elementum. Phasellus metus orci, tempus non sagittis ac, iaculis sed nunc. Cras auctor ipsum ut accumsan pulvinar. Ut tellus elementum sagittis vitae et leo duis. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Velit aliquet sagittis id consectetur purus ut faucibus.</p>
 			</div>
 		</article>
-		<!-- The aside, featuring an image and a titled paragraph -->
+		<!-- The aside, featuring an image-->
 		<aside class="side-section">
 			<img class="side-image" alt="sidebar-tape" src="img/sidetape.jpg" >	
 		</aside>
-		<!-- Secondary section, featuring the Schedule Table-->
+		<!-- This section fetaures the Schedule Table-->
 		<section class="schedule-section container clearfix">
 			<h2 class="schedule-section-title">SCHEDULE</h2>
 			<button id="loadTable">Load Schedule</button>
 			<section>
-				<div id="json_table">
-					
+				<div id="json_table">				
 				</div>
 			</section>
 		</section>
-		<!-- Edit profile -->
+		<!--This section features a form to edit the profile -->
 		<section class="edit-profile-section container clearfix">
 			<h2 class="edit-profile-title">EDIT PROFILE</h2>
 			<form id="form" action="submit.php" method="post">
@@ -124,13 +124,11 @@
 				<p>
 					<label for="pc">Postal Code</label>
 					<input type="text" required="" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" value="" name="pc" id="pc" placeholder="A0A 0A0">
-				</p>		
-
+				</p>	
 				<button id="loadProfile" type="submit">SUBMIT</button>
-			</form>
-		
+			</form>		
 		</section>
-		<!-- Profile Info -->
+		<!-- This section displays the Profile Info -->
 		<section class="profile-info-section container clearfix">
 			<h2 class="profile-info-title">PROFILE INFO</h2>
 			<div>
@@ -145,10 +143,10 @@
 			</div>
 		</section>
 	</main>
-	<!-- Footer, featuring copyright to the left, and social media navigation links to the right -->
+	<!-- Footer, featuring Quicklinks to the left, social media links in the center, and an address to the left -->
 	<footer class="site-footer container clearfix">
-		<!-- Copyright -->
 		<div class="quicklinks-div footer-div clearfix">
+			<!-- Quicklinks for Schedule, About, Portfolio and Contact-->
 			<h3 class="footer-title">QUICK LINKS</h3>
 			<div class="quicklink-nav-container clearfix">
 				<nav class="footer-nav-container quicklink-nav clearfix">
@@ -201,6 +199,7 @@
 				</ul>
 			</nav>	
 		</div>
+		<!-- Address -->
 		<div class="address-div footer-div clearfix">
 			<h3 class="footer-title">ADDRESS</h3>
 			<div class="address-text-container">
