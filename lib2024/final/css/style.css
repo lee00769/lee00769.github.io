@@ -358,30 +358,32 @@ label {
 	display: inline-block;
 	width: 35%;
 	padding: 2% 1%;
-  	margin: 7px 0;
+  	margin: 6px 0;
   	box-sizing: border-box;
   	float: left;
+
 
 }
 
 input[type=text], input[type=email], select {
-  width: 65%;
-  padding: 2% 1%;
-  margin: 6px 0;
-  display: inline-block;
-  border: 1px solid black;
-  box-sizing: border-box;
-  float: right;
+	width: 65%;
+	padding: 2% 1%;
+	margin: 6px 0;
+	display: inline-block;
+	border: 1px solid black;
+	box-sizing: border-box;
+	float: right;
+
 }
 
 
 #loadProfile {
   float: right;
- /* padding: 12px 20px;*/
   margin: 8px 0;
   background-color: white;
   border: 1px solid black;
   cursor: pointer;
+  clear: right
 
 }
 
@@ -471,7 +473,6 @@ footer {
 }
 
 .social-nav li{
-/*	float: left;*/
 	display: inline-block;
 }
 
