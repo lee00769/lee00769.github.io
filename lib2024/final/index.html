@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Author" content="Kelvin Lee">
+		<title>Final</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+<body>
+	<div class="overlay-container loader-container">
+		<div class="loader"></div>
+	</div>
+	<!-- Header with Cat Logo and Title-->
+	<header class="site-header container clearfix" id="site-header">
+		<h1 class="title">My logo</h1>
+		<!-- Navigation links for Home, About, Contact and Work-->
+		<nav class="main-nav-container desktop-nav">
+			<ul>
+				<li>
+					<a class="nav-link index" href="index.html">HOME</a>
+				</li>
+				<li>
+					<a class="nav-link about" href="about.html">ABOUT</a>
+				</li>
+				<li>
+					<a class = "nav-link schedule" href="schedule.html">SCHEDULE</a>
+				</li>
+				<li>
+					<a class = "nav-link portfolio" href="portfolio.html">PORTFOLIO</a>
+				</li>
+				<li>
+					<a class = "nav-link contact" href="contact.html">CONTACT</a>
+				</li>	
+			</ul>	
+		</nav>
+		<div class="ham"></div>
+		<!-- mobile navigation start -->
+		<div class="mobile-nav-container clearfix">
+			<nav class="main-nav-container mobile-nav">
+				<ul class="main-nav">
+					<li>
+						<a class="nav-link index" href="index.html">HOME</a>
+					</li>
+					<li>
+						<a class="nav-link about" href="about.html">ABOUT</a>
+					</li>
+					<li>
+						<a class = "nav-link schedule" href="schedule.html">SCHEDULE</a>
+					</li>
+					<li>
+						<a class = "nav-link portfolio" href="portfolio.html">PORTFOLIO</a>
+					</li>
+					<li>
+						<a class = "nav-link contact" href="contact.html">CONTACT</a>
+					</li>	
+				</ul>
+			</nav>
+		</div>
+		<!-- mobile navigation end -->
+	</header>
+	<!-- Main content: An article with an aside to the right -->
+	<main class="main-content-container container clearfix">		
+		<!-- The article, featuring a title and two paragraphs -->
+		<article class="about-article">	
+			<h2 class="about-article-title">ABOUT</h2>
+			<div class="about-article-div">			
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar, mi non bibendum cursus, nisi nisi viverra ipsum, vitae suscipit augue nunc id massa. Vestibulum vitae tristique lorem. In facilisis eu mi at dignissim. Proin placerat nibh volutpat augue lobortis, vel venenatis eros pellentesque. Duis pellentesque dolor quis tortor imperdiet porttitor. Curabitur nibh metus, ultrices et rutrum sed, egestas fringilla ipsum. Phasellus ipsum sem, fringilla eu velit sit amet, gravida imperdiet nibh. Nam vehicula sodales accumsan. Phasellus eget euismod ipsum. Curabitur vel est condimentum, sodales orci id, malesuada turpis.</p>
+				<br>
+				<p>Maecenas at pretium lectus. Curabitur efficitur sollicitudin augue, vel faucibus leo ullamcorper eget. Nulla eget scelerisque arcu. Fusce et faucibus nisi. Suspendisse dictum at ex eget ultrices. Sed tristique pellentesque mauris, in vehicula velit tempus sit amet. Vivamus elit magna, maximus id nulla at, eleifend scelerisque mi. Donec ornare dolor ut ex molestie semper. Sed at tempus nulla. Proin volutpat ipsum et magna maximus, dapibus posuere lorem molestie. In pharetra felis non sem dapibus elementum. Phasellus metus orci, tempus non sagittis ac, iaculis sed nunc. Cras auctor ipsum ut accumsan pulvinar. Ut tellus elementum sagittis vitae et leo duis. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Velit aliquet sagittis id consectetur purus ut faucibus.</p>
+			</div>
+		</article>
+		<!-- The aside, featuring an image and a titled paragraph -->
+		<aside class="side-section">
+			<img class="side-image" alt="sidebar-tape" src="img/sidetape.jpg" >	
+		</aside>
+		<!-- Secondary section, featuring the Schedule Table-->
+		<section class="schedule-section container clearfix">
+			<h2 class="schedule-section-title">SCHEDULE</h2>
+			<button id="loadTable">Load Schedule</button>
+			<section>
+				<div id="json_table">
+					
+				</div>
+			</section>
+		</section>
+		<!-- Edit profile -->
+		<section class="edit-profile-section container clearfix">
+			<h2 class="edit-profile-title">EDIT PROFILE</h2>
+			<form id="form" action="submit.php" method="post">
+				<p>
+					<label for="name">Name:</label>
+					<input type="text" name="name" id="name">
+				</p>
+				<p>
+					<label for="email">Email:</label>
+					<input type="email" required name="email" id="email" placeholder="address@domain.com">
+				</p>
+				<p>
+					<label for="address">Address</label>
+					<input type="text" required name="address" id="address">
+				</p>
+				<p>
+					<label for="city">City</label>
+					<input type="text" required name="city" id="city" >
+				</p>
+				<p>
+					<label for="province">Province</label>
+					<select name="province" id="province" required>
+						<option value="">Select Province</option>
+						<option value="ON">Ontario</option>
+						<option value="QC">Quebec</option>
+						<option value="AB">Alberta</option>
+						<option value="BC">British Columbia</option>
+						<option value="MB">Manitoba</option>						
+						<option value="NB">New Brunswick</option>
+						<option value="NL">Newfoundland and Labrador</option>
+						<option value="NS">Nova Scotia</option>
+						<option value="PE">Prince Edwrard Island</option>
+						<option value="SK">Saskatchewan</option>
+					</select>
+				</p>
+				<p>
+					<label for="pc">Postal Code</label>
+					<input type="text" required="" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" value="" name="pc" id="pc" placeholder="A0A 0A0">
+				</p>		
+
+				<button id="loadProfile" type="submit">SUBMIT</button>
+			</form>
+		
+		</section>
+		<!-- Profile Info -->
+		<section class="profile-info-section container clearfix">
+			<h2 class="profile-info-title">PROFILE INFO</h2>
+			<div>
+				<div id="results">
+					<div class="user-icon"><i class="far fa-user-circle fa-10x"></i></div>
+					<h3 class="name-line"><span id="name_result"></span></h3>
+					<p class="line1"><span id="email_result"></span></p>
+					<p class="line2"><span id="address_result"></span><span id="city_result"></span></p>
+					<p class="line3"><span id="province_result"></span><span id="pc_result"></span></p>
+					<p class="mail-line"><a href="#" id="email_result2"><i class="far fa-envelope fa-2x"></i></a></p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- Footer, featuring copyright to the left, and social media navigation links to the right -->
+	<footer class="site-footer container clearfix">
+		<!-- Copyright -->
+		<div class="quicklinks-div footer-div clearfix">
+			<h3 class="footer-title">QUICK LINKS</h3>
+			<div class="quicklink-nav-container clearfix">
+				<nav class="footer-nav-container quicklink-nav clearfix">
+					<ul>
+						<li>
+							<a class="footer-nav-link" href="schedule.html">SCHEDULE</a>					
+						</li>
+						<li>
+							<a class="footer-nav-link" href="about.html">ABOUT</a>
+						</li>
+						<li>
+							<a class="footer-nav-link" href="portfolio.html">PORTFOLIO</a>
+						</li>
+						<li>
+							<a class="footer-nav-link" href="contact.html">CONTACT</a>
+						</li>
+					</ul>
+				</nav>	
+			</div>
+		</div>
+		<!-- Social media nav, featuring Twitter, Youtube and Facebook -->
+		<div class="followus-div footer-div clearfix">
+			<h3 class="footer-title">FOLLOW US</h3>
+			<nav class="footer-soc-container social-nav">
+				<ul>
+					<li class="social-link">	
+						<a href="https://facebook.com/"> 
+							<span class='fa-stack fa-lg fb-logo'>
+						        <i class='fas fa-circle fb-circle fa-stack-2x'></i>
+						        <i class='fab fa-facebook-f fa-stack-1x fa-inverse'></i>
+						    </span>
+						</a>						
+					</li>
+					<li class="social-link">
+						<a href="https://youtube.com/">		
+							 <span class='fa-stack fa-lg yt-logo'>
+						        <i class='fas fa-circle yt-circle fa-stack-2x'></i>
+						        <i class='fab fa-youtube fa-stack-1x fa-inverse'></i>
+						    </span>
+						</a>
+					</li>
+					<li class="social-link">	
+						<a href="https://twitter.com/"> 
+							<span class='fa-stack fa-lg tw-logo'>
+						        <i class='fas fa-circle tw-circle fa-stack-2x'></i>
+						        <i class='fab fa-twitter fa-stack-1x fa-inverse'></i>
+						    </span>	
+						</a>
+					</li>
+				</ul>
+			</nav>	
+		</div>
+		<div class="address-div footer-div clearfix">
+			<h3 class="footer-title">ADDRESS</h3>
+			<div class="address-text-container">
+				<p>1385 Woodroofe Ave,</p>
+				<p>Nepean, ON K2G 1V8</p>
+				<p>Canada</p>	
+			</div>		
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>	
+</body>

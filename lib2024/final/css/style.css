@@ -1,0 +1,688 @@
+@charset "utf-8";
+/*@import url("overlay-loader.css");*/
+
+ /*http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS clearfix*/
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*
+	Color Pallete
+	
+	Green : #7CC576;
+	Blue : #6DCFF6;
+	Black : #000000;
+	White : #FFFFFF;
+*/
+
+
+/************************
+		MOBILE FIRST
+************************/
+
+
+
+/*Body Styles, for background*/
+
+body {
+	
+	background-image: url("../img/double-bubble-outline.png");
+}
+
+/*Typography Styles*/
+
+
+
+
+h2, h3, p, a, button {
+	font-family: 'Poppins', sans-serif;
+
+}
+
+
+h1 {
+	font-size: 43px;
+	color: #72a9ae;
+	font-family: '20_dbregular', sans-serif;
+}
+
+h2 {
+	font-size: 27px;
+	color: #72a9ae;
+}
+
+h3 {
+	font-size: 22px;
+	color: #72a9ae;
+}
+
+
+
+
+/*Header Styles*/
+
+header {		
+	width: 100%;
+	background: white;
+}
+
+
+.title{
+	float: left;
+	padding: 4% 5%;
+}
+
+
+	/*Hamburger*/
+
+
+.ham {
+		
+		height: 15px;
+		margin: 30px;
+		padding-top: 5px;
+		position: relative;
+		float: right;
+		cursor: pointer;
+	}
+
+.ham, .ham:before, .ham:after {
+	width: 30px;
+	border-top: 5px solid black;
+}
+
+.ham:before {
+	content: "";
+	display:block;
+	position: absolute;
+	background: black;
+}
+
+.ham:after {
+	content: "";
+	display: block;
+	background: black;
+	position: absolute;
+	bottom: 0;
+}
+
+	/*Nav*/
+
+.desktop-nav {
+	display: none;
+	clear: both;
+}
+
+.mobile-nav {
+	width:100%;
+	clear: both;
+	position: absolute;
+	display: none;
+}
+
+.mobile-nav-container {
+	position: relative;
+	clear: both;
+	
+}
+
+.mobile-nav li {
+	box-sizing: border-box;
+	width:100%;
+	padding: 10px;
+	background: #72a9ae;
+	border-bottom: 1px solid #121212;	
+
+}
+
+
+.nav-link {		
+	text-decoration: none;
+	color: #000000;
+
+}
+
+/*About Styles*/
+
+.about-article-title{
+	padding: 3% 5%;
+}
+
+.about-article-div{
+	padding: 0% 3% 3% 3%;
+}
+/*Aside Styles*/
+
+.side-section {
+	width: 100%;
+	padding: 2%;
+	float: right;
+	box-sizing: border-box;
+
+}
+
+.side-image {
+	width: 100%;
+}
+
+/** Schedule Style **/
+
+
+.schedule-section-title {
+	padding: 3% 5%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 1%;
+}
+
+tr:first-child {
+	background-color: #FFFFFF;
+	color: #72a9ae;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+#loadTable {
+  width: 300px;
+  background-color: #72a9ae;
+  color: black;
+  padding: 1% 2%;
+  margin: 1% auto;
+  display: block;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#loadTable:hover {
+	background: #7ccdd4;
+}
+
+/*Loader*/
+
+.overlay-container {
+	display: none;
+	/*position:fixed makes the element fix itself in position relative to the browser*/
+	position: fixed;
+	/*We make overlay width:100% and height:100% to make this element cover the enitre browser screen*/
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(#a7a7a7, #4e4e4e);
+	top: 0;
+	/*background:rgba is used to create see-through background*/
+	/*rgb part is used to define red, greem and blue color values*/
+	/*a part is the alpha chanel, which defines the opactity of this element's background*/
+	/*alpha chanel ranges from 0 - 1, eg(0.1, 0.55, 0.98, 0, 1)*/
+	/* 0 here being fully transparent*/
+	/*1 here being fully opaque*/
+	z-index: 2;
+	/* z index is used to make an element closer to screen*/
+	/*to create an overlay, this element must have the highest z-index value*/
+	/* eg if another element on your document has z-index : 1000, then this element must have atleast z-index value of 1001 */
+}
+
+.loader {
+	/*This is used to center an element on the screen both vertically and horizontally*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	/*margin is given based on the width and heigh of the element*/
+	/*margin-top: -(height/2)*/
+	/*margin-left : - (width/2)*/
+	/*margin : -(150/2) 0 0 -(150/2) */
+	border: 16px solid #f3f3f3;
+	/*border-radius 50% is used to crearte circles*/
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	/*animation: name duration timing-function repetition*/
+	/*to define more than one CSS animation, use comma separated values*/
+	/*to increase readablity we define different animations in separate lines*/
+	animation: spin 2s linear infinite, change-color 4s ease-in-out infinite, border-radius-change 1s ease infinite;
+}
+
+
+/*keyframes declarion is used to define animation*/
+
+
+/*syntax - @keyframes name-of-the-animation*/
+
+
+/*The following keyframes declaration is used to spin an element on the screen*/
+
+@keyframes spin {
+	/*from sets the start of the property in an animation*/
+	from {
+		transform: rotate(0deg);
+	}
+	/*to sets the ending of the property in an animation*/
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+/*This @keyframes declaration will change the color from blue to orange to blue */
+
+@keyframes change-color {
+	/*0 % is begining*/
+	0% {
+		border-top-color: #3498db;
+	}
+	/*50% is the middle*/
+	50% {
+		border-top-color: #FF5722;
+	}
+	/*100% is ending*/
+	100% {
+		border-top-color: #3498db;
+	}
+}
+
+@keyframes border-radius-change {
+	0% {
+		border-radius: 50%;
+	}
+	50% {
+		border-radius: 0%;
+	}
+	100% {
+		border-radius: 50%;
+	}
+}
+
+/** Form Style **/
+
+.edit-profile-title {
+	padding: 3% 5%;
+}
+
+form {
+	max-width: 70%;
+	padding-left: 10%;
+	padding-right: 15%;
+	color: black;
+	font-weight: bold;
+}
+
+
+
+label {
+	display: inline-block;
+	width: 35%;
+	padding: 2% 1%;
+  	margin: 7px 0;
+  	box-sizing: border-box;
+  	float: left;
+
+}
+
+input[type=text], input[type=email], select {
+  width: 65%;
+  padding: 2% 1%;
+  margin: 6px 0;
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+  float: right;
+}
+
+
+#loadProfile {
+  float: right;
+ /* padding: 12px 20px;*/
+  margin: 8px 0;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+
+}
+
+/*Profile Card Style*/
+
+
+
+
+.profile-info-title {
+	padding: 3% 5%;
+}
+
+.fa-envelope {
+	color: #72a9ae;
+}
+
+div#results {
+  background-color: white;
+  padding: 20px;
+  max-width: 100%;
+  margin: 2% auto;
+  text-align: center;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+
+
+#results span, #results a {
+	opacity: 0;
+	transition: all 0.5s ease-out;
+	transition-delay: 1s;
+}
+
+#results.reveal span, #results.reveal a {
+	opacity: 1;
+}
+
+.name-line {
+	padding: 2% 0%;
+}
+
+.line1, .line2, .line3 {
+	padding: 1% 0%;
+}
+
+.mail-line {
+	padding-top: 3%;
+}
+/*Footer Styles*/
+
+
+footer {		
+		width: 100%;
+		background: #454545;
+		box-sizing: border-box;
+		padding-top: 2%;
+		padding-bottom: 4%;
+
+	}
+
+.footer-title {
+	color: white;
+	text-align: center;
+	padding-bottom: 7%;
+}
+
+.footer-nav-link {
+	color: white;
+	text-decoration: none;
+}
+
+.footer-nav-container li {
+	padding: 7% 0;
+}
+
+.social-nav {
+	padding-top: 3%
+}
+
+.quicklinks-div {
+	text-align: center;
+}
+
+.quicklink-nav-container {
+	display: inline-block;
+	text-align: left;
+}
+
+.social-nav {
+	text-align: center;
+}
+
+.social-nav li{
+/*	float: left;*/
+	display: inline-block;
+}
+
+.yt-circle {
+	color: #cd201f;
+}
+
+.tw-circle {
+	color: #55acee; 
+}
+
+.fb-circle {
+	color: #3b5999;
+}
+
+.address-text-container {
+	
+}
+
+.address-div {
+	text-align: center;
+}
+
+.address-text-container {
+	text-align: left;
+	position: relative;
+	left: 40%;
+	color: white;
+}
+
+.address-text-container p{
+	padding: 1% 0;
+}
+
+/************************
+	DESKTOP-STYLES
+************************/
+
+@media only screen and (min-width: 768px) {
+
+/*the following css is used to restrict the content beyond 1280px*/
+	/*This is to make sure the main content is in the readbable area for large screen sizes*/
+	header, main, footer {
+
+		max-width: 1024px;
+		margin: 0 auto;
+
+	}
+	/*Header Styles*/
+
+
+	.desktop-nav {
+		display: block;
+		width: 100%;
+		float: left;
+		background: #72a9ae;
+		padding: 1% 0%;
+
+	}
+
+	.desktop-nav li {
+		width: 60%;
+
+	}
+
+
+	.mobile-nav-container {
+		display: none;
+	}
+
+	.mobile-nav {
+		display: none;
+	}
+
+	.ham {
+		display: none;
+	}
+
+
+	.nav-link {
+		width: 20%;
+		box-sizing: border-box;
+		padding-left: 3%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		float: left;
+		text-align: center;
+		text-decoration: none;
+		color: black;
+
+	}
+
+
+	/*Main Article Styles*/
+
+	.about-article-div {
+		width: 65%;
+		padding: 0% 5%;
+		float: left;
+		box-sizing: border-box;
+	}
+
+
+
+	/*Aside Styles*/
+
+	.side-section {
+		width: 35%;
+		padding: 0% 4% 0% 0%;
+		float: right;
+		box-sizing: border-box;
+
+	}
+
+	.side-image {
+		width: 100%;
+	}
+
+
+	/*Schedule Section Styles*/
+
+	.schedule-section-title {
+	padding: 3% 3%;
+	
+	}
+
+	.schedule-section {
+		width: 100%;
+		float: left ;
+		padding-right: 2%;
+		padding-left: 2%;
+		padding-bottom: 2%;
+		box-sizing: border-box;
+	}
+
+
+
+	/*Profile area*/
+
+	.edit-profile-title {
+	padding: 3% 10%;
+	}
+
+	.edit-profile-section {
+		width: 50%;
+		float: left ;
+
+	}
+
+	.profile-info-title {
+	padding: 3% 20%;
+	}
+	.profile-info-section {
+		width: 50%;
+		float: left ;
+	}
+
+	div#results {
+	  background-color: white;
+	  padding: 20px;
+	  max-width: 50%;
+	  margin: 0 auto;
+	  text-align: center;
+	  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+	  margin-bottom: 5%;
+	}
+
+	/*Footer Styles*/
+
+	footer {		
+		width: 100%;
+		background: #454545;
+		box-sizing: border-box;
+
+	}
+
+	.footer-div {
+		width: 33%;
+		float: left; 
+		display: inline-block;
+		box-sizing: border-box;
+		
+	}
+
+	
+
+}
+
